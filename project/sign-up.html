@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <main class="sign-up-main">
+        <img src="logo.png" alt="Logo" class="logo"> 
+        <p class="sign-up-message">Please sign up</p>
+        
+        <form action="./sign-up.form" method="POST" class="sign-up-form">
+            <div class="input-div">
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+
+            <p class="switch-form-text">
+                Already have an account, <a class="signin-link" href="./sign-in.html">click here !</a>
+            </p>
+            
+            <button type="submit" class="btn">Sign up</button>
+
+        </form>
+
+        <p class="sign-up-footer">&copy; 2025 - Rikkei Education</p>
+    </main>
+
+    <div id="msg">
+        <div id="sign-up-validation" class="hidden">
+            <div class="sign-up-validation-header">
+                <i class="fa-solid fa-circle-minus"></i>
+                <p>Error</p>
+                <i class="fa-solid fa-circle-xmark close-btn"></i>
+            </div>
+            <div class="sign-up-validation-content">
+                <p class="username-cannot-blank">Tên người dùng không được để trống</p>
+                <p class="email-cannot-blank">Email không được để trống</p>
+                <p class="password-cannot-blank">Mật khẩu không được để trống</p>
+            </div>
+        </div>
+
+        <div id="sign-up-toast" class="hidden">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="toast-title">Đăng ký thành công</span>
+        </div>
+
+        <div id="sign-up-error" class="hidden">
+            <div class="email-exist hidden"> 
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span class="error-title">Email đã tồn tại. Đến trang đăng nhập</span>
+            </div>
+            
+            <div class="email-error hidden"> 
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span class="error-title">Email không đúng định dạng</span>
+            </div>
+            
+            <div class="password-min-length-error hidden"> 
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span class="error-title">Mật khẩu phải tối thiểu 8 ký tự</span>
+            </div>
+            
+            <div class="password-number-required-error hidden"> 
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span class="error-title">Mật khẩu phải bao gồm cả chữ số</span>
+            </div>
+            
+            <div class="password-uppercase-lowercase-error hidden"> 
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span class="error-title">Mật khẩu phải bao gồm cả chữ hoa và chữ thường</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./sign-up.js"></script>
+</body>
+</html>

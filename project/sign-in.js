@@ -12,17 +12,20 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const rememberCheckbox = document.querySelector("#save-loggin-checkbox");
 
+const msgContainer = document.querySelector("#msg");
 const loginValidation = document.querySelector("#login-validation");
 const loginToast = document.querySelector("#login-toast");
 const loginError = document.querySelector("#login-error");
+const closeBtn = document.querySelector("#close-validation-btn");
 
 // 3. Hàm kiểm tra rỗng (isEmpty)
 function isEmpty(email, password) {
     // Kiểm tra nếu 1 trong 2 trường (hoặc cả 2) bị rỗng
     if (email === "" || password === "") {
         // Hiện thông báo lỗi validation
-        if (loginValidation) {
-            loginValidation.style.display = "block";
+        if (msgContainer && loginValidation) {
+            msgContainer.classList.add("show");
+            loginValidation.classList.remove("hidden");
         }
         return false; // Trả về false nếu rỗng
     }
@@ -37,8 +40,9 @@ function isExistEmailAndPassword(email, password) {
     );
     // Nếu không tồn tại hoặc password sai -> hiện #login-error và return false
     if (!user) {
-        if (loginError) {
-            loginError.style.display = "block";
+        if (msgContainer && loginError) {
+            msgContainer.classList.add("show");
+            loginError.classList.remove("hidden");
         }
         return false;
     }
@@ -46,15 +50,20 @@ function isExistEmailAndPassword(email, password) {
 }
 
 // 5. Hàm lưu currentUser vào localStorage
-function saveCurrentUser(user) {
-    localStorage.setItem("currentUser", JSON.stringify(user));
+function saveCurrentUser(email) {
+    const userList = getUserList();
+    const user = userList.find((u) => u.email.toLowerCase() === email.toLowerCase());
+    if (user) {
+        localStorage.setItem("currentUser", JSON.stringify(user));
+    }
 }
 
 // 6. Hàm reset thông báo lỗi (resetErrorMsg)
 function resetErrorMsg() {
-    if (loginValidation) loginValidation.style.display = "none";
-    if (loginError) loginError.style.display = "none";
-    if (loginToast) loginToast.style.display = "none";
+  if (msgContainer) msgContainer.classList.remove("show");
+  if (loginValidation) loginValidation.classList.add("hidden");
+  if (loginError) loginError.classList.add("hidden");
+  if (loginToast) loginToast.classList.add("hidden");
 }
 
 // 7. Gắn sự kiện submit cho form
@@ -64,6 +73,7 @@ if (signinForm) {
         e.preventDefault();
     // Reset các thông báo cũ trước khi kiểm tra
     resetErrorMsg();
+
     const emailValue = emailInput.value.trim();
     const passwordValue = passwordInput.value.trim();
     // 1: Kiểm tra rỗng
@@ -86,10 +96,11 @@ if (signinForm) {
         localStorage.removeItem("loggedInUser");
     }
     //4: Lưu currentUser vào localStorage
-    saveCurrentUser(currentUser);
+    saveCurrentUser(emailValue);
     // Bước 5: Hiện toast thành công và chuyển trang sau 800ms
-    if (loginToast) {
-        loginToast.style.display = "block";
+    if (msgContainer && loginToast) {
+        msgContainer.classList.add("show");
+        loginToast.classList.remove("hidden");
     }
     setTimeout(() => {
         window.location.href = "pages/dashboard.html";    //chèn link dashboard
@@ -101,3 +112,20 @@ if (signinForm) {
 window.addEventListener("load", () => {
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (loggedInUser) {
+        const ONE_DAY = 24 * 60 * 60 * 1000;
+        const isExpired = Date.now() - loggedInUser.loginTime > ONE_DAY;
+
+        if (!isExpired) {
+            if (emailInput) emailInput.value = loggedInUser.email || "";
+            if (passwordInput) passwordInput.value = loggedInUser.password || "";
+            if (rememberCheckbox) rememberCheckbox.checked = true;
+        } else {
+        localStorage.removeItem("loggedInUser");
+    }
+  }
+});
+
+// 9. Reset thông báo khi người dùng nhập lại hoặc đóng modal
+if (emailInput) emailInput.addEventListener("input", resetErrorMsg);
+if (passwordInput) passwordInput.addEventListener("input", resetErrorMsg);
+if (closeBtn) closeBtn.addEventListener("click", resetErrorMsg);

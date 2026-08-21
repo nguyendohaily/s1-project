@@ -10,20 +10,20 @@
     <main class="sign-in-main"> 
         <img src="link logo.png" alt="Logo" class="logo" />    <!-- ảnh logo -->
         <p class="sign-in-message">Please sign in </p>
-        <form action="" method="GET" id="sign-in-form">
+        
+        <form id="sign-in-form">
             <div>
                 <input type="email" id="email" name="email" placeholder="Email address" />
                 <input type="password" id="password" name="password" placeholder="Password" />
             </div>
             <div class="save-loggin">
-                <input type="checkbox" name="save-loggin-text" id="save-loggin-text"/>
-                <label for="save-loggin-checkbox" class="save=loggin-text">Remember me</label>
+                <input type="checkbox" name="save-loggin-checkbox" id="save-loggin-checkbox"/>
+                <label for="save-loggin-checkbox" class="save-loggin-text">Remember me</label>
             </div>
             <p>
             Don"t have an account, <a class="signup-link" href="link signup html">click here!</a>    <!-- link sign up html -->
             </p>
             <button type="submit" class="btn">Sign in</button>
-            </div>
         </form>
 
         <p class="sign-in-footer">&copy;2025 - Rikkei Education</p>
@@ -34,7 +34,7 @@
             <div class="login-validation-header">
                 <i class="fa-solid fa-circle-minus"></i>
                 <p>Error</p>
-                <div class="close-btn">
+                <div class="close-btn" id="close-validation-btn" style="cursor: pointer;">
                     <img src="...link icon error.png" alt="close" /> <!-- ảnh icon error -->
                 </div>
             </div>

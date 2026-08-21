@@ -1,0 +1,1000 @@
+ {
+    "usercode": "U001",
+    "username": "user_1",
+    "email": "user1@example.com", 
+    "password": "UserPass01",
+    "role": "admin",
+    "birthday": "1997-07-05",
+    "status": "Deactive",
+    "description": "National again month truth. Actually civil table put nearly base."
+  },
+  {
+    "usercode": "U002",
+    "username": "user_2",
+    "email": "user2@example.com",
+    "password": "UserPass02",
+    "role": "user",
+    "birthday": "1989-10-02",
+    "status": "Deactive",
+    "description": "Generation sense theory suffer onto tell much. Floor every cold speak weight season clear into."
+  },
+  {
+    "usercode": "U003",
+    "username": "user_3",
+    "email": "user3@example.com",
+    "password": "UserPass03",
+    "role": "user",
+    "birthday": "1985-08-20",
+    "status": "Active",
+    "description": "Let attack maybe event. View who site team magazine president senior."
+  },
+  {
+    "usercode": "U004",
+    "username": "user_4",
+    "email": "user4@example.com",
+    "password": "UserPass04",
+    "role": "user",
+    "birthday": "2007-03-06",
+    "status": "Active",
+    "description": "Leave generation her part debate. Game director main paper positive. Get economic this civil table."
+  },
+  {
+    "usercode": "U005",
+    "username": "user_5",
+    "email": "user5@example.com",
+    "password": "UserPass05",
+    "role": "user",
+    "birthday": "1993-09-11",
+    "status": "Active",
+    "description": "Movie small group how also require. Campaign occur teacher hard six little if able."
+  },
+  {
+    "usercode": "U006",
+    "username": "user_6",
+    "email": "user6@example.com",
+    "password": "UserPass06",
+    "role": "admin",
+    "birthday": "2003-10-09",
+    "status": "Deactive",
+    "description": "Compare Mrs happy. Go so city author red would. Clearly red half cause relate economy value."
+  },
+  {
+    "usercode": "U007",
+    "username": "user_7",
+    "email": "user7@example.com",
+    "password": "UserPass07",
+    "role": "user",
+    "birthday": "1990-06-29",
+    "status": "Deactive",
+    "description": "Week mean produce. Social find nice past break subject reduce agreement."
+  },
+  {
+    "usercode": "U008",
+    "username": "user_8",
+    "email": "user8@example.com",
+    "password": "UserPass08",
+    "role": "admin",
+    "birthday": "1961-06-08",
+    "status": "Deactive",
+    "description": "Black TV scene group. Plan television dinner reason hundred not. Skin state which box."
+  },
+  {
+    "usercode": "U009",
+    "username": "user_9",
+    "email": "user9@example.com",
+    "password": "UserPass09",
+    "role": "user",
+    "birthday": "1986-02-19",
+    "status": "Deactive",
+    "description": "Little kid north dinner realize despite. Site measure sell. Surface join Mr approach also."
+  },
+  {
+    "usercode": "U010",
+    "username": "user_10",
+    "email": "user10@example.com",
+    "password": "UserPass10",
+    "role": "user",
+    "birthday": "1978-06-08",
+    "status": "Deactive",
+    "description": "Behavior business inside phone any. Get would order attorney second brother."
+  },
+  {
+    "usercode": "U011",
+    "username": "user_11",
+    "email": "user11@example.com",
+    "password": "UserPass11",
+    "role": "admin",
+    "birthday": "1963-10-25",
+    "status": "Active",
+    "description": "Serious eye likely include father carry. Include including explain why."
+  },
+  {
+    "usercode": "U012",
+    "username": "user_12",
+    "email": "user12@example.com",
+    "password": "UserPass12",
+    "role": "admin",
+    "birthday": "1984-08-21",
+    "status": "Deactive",
+    "description": "Leg scientist organization drop citizen poor else answer. Focus wonder customer executive good."
+  },
+  {
+    "usercode": "U013",
+    "username": "user_13",
+    "email": "user13@example.com",
+    "password": "UserPass13",
+    "role": "admin",
+    "birthday": "1970-11-18",
+    "status": "Deactive",
+    "description": "Key mouth adult. Two finish car already. Politics recent sort."
+  },
+  {
+    "usercode": "U014",
+    "username": "user_14",
+    "email": "user14@example.com",
+    "password": "UserPass14",
+    "role": "admin",
+    "birthday": "2000-12-25",
+    "status": "Active",
+    "description": "Relationship leader wonder tough. Candidate computer them everybody herself."
+  },
+  {
+    "usercode": "U015",
+    "username": "user_15",
+    "email": "user15@example.com",
+    "password": "UserPass15",
+    "role": "user",
+    "birthday": "1988-11-08",
+    "status": "Active",
+    "description": "Myself history plant hundred."
+  },
+  {
+    "usercode": "U016",
+    "username": "user_16",
+    "email": "user16@example.com",
+    "password": "UserPass16",
+    "role": "admin",
+    "birthday": "1979-11-02",
+    "status": "Active",
+    "description": "Story director past fly from. Democrat husband success system laugh."
+  },
+  {
+    "usercode": "U017",
+    "username": "user_17",
+    "email": "user17@example.com",
+    "password": "UserPass17",
+    "role": "admin",
+    "birthday": "2002-04-12",
+    "status": "Active",
+    "description": "Director term peace food them entire. Time spend soldier attorney air push Democrat."
+  },
+  {
+    "usercode": "U018",
+    "username": "user_18",
+    "email": "user18@example.com",
+    "password": "UserPass18",
+    "role": "user",
+    "birthday": "1967-02-05",
+    "status": "Deactive",
+    "description": "Item most heavy. Particular billion easy peace agree ask between treatment. Follow cup bad baby."
+  },
+  {
+    "usercode": "U019",
+    "username": "user_19",
+    "email": "user19@example.com",
+    "password": "UserPass19",
+    "role": "admin",
+    "birthday": "2005-12-17",
+    "status": "Active",
+    "description": "Scene perhaps food radio institution. Show simple behavior lawyer marriage pattern Democrat."
+  },
+  {
+    "usercode": "U020",
+    "username": "user_20",
+    "email": "user20@example.com",
+    "password": "UserPass20",
+    "role": "admin",
+    "birthday": "1995-07-28",
+    "status": "Deactive",
+    "description": "Senior eat meet social where."
+  },
+  {
+    "usercode": "U021",
+    "username": "user_21",
+    "email": "user21@example.com",
+    "password": "UserPass21",
+    "role": "admin",
+    "birthday": "1980-05-03",
+    "status": "Deactive",
+    "description": "Well organization stuff share. Southern thought provide represent campaign."
+  },
+  {
+    "usercode": "U022",
+    "username": "user_22",
+    "email": "user22@example.com",
+    "password": "UserPass22",
+    "role": "admin",
+    "birthday": "1982-04-16",
+    "status": "Active",
+    "description": "Write subject idea. Either experience last mother."
+  },
+  {
+    "usercode": "U023",
+    "username": "user_23",
+    "email": "user23@example.com",
+    "password": "UserPass23",
+    "role": "admin",
+    "birthday": "1988-05-07",
+    "status": "Active",
+    "description": "Answer ready truth good. All dinner popular protect phone trip."
+  },
+  {
+    "usercode": "U024",
+    "username": "user_24",
+    "email": "user24@example.com",
+    "password": "UserPass24",
+    "role": "admin",
+    "birthday": "1979-10-29",
+    "status": "Active",
+    "description": "Drive service parent them anyone. Report likely many before."
+  },
+  {
+    "usercode": "U025",
+    "username": "user_25",
+    "email": "user25@example.com",
+    "password": "UserPass25",
+    "role": "admin",
+    "birthday": "2004-02-20",
+    "status": "Active",
+    "description": "Way successful degree look letter own. Think buy color. Animal soldier all and future particular."
+  },
+  {
+    "usercode": "U026",
+    "username": "user_26",
+    "email": "user26@example.com",
+    "password": "UserPass26",
+    "role": "admin",
+    "birthday": "1986-07-14",
+    "status": "Deactive",
+    "description": "Sister run alone old newspaper. President society easy draw possible perform."
+  },
+  {
+    "usercode": "U027",
+    "username": "user_27",
+    "email": "user27@example.com",
+    "password": "UserPass27",
+    "role": "admin",
+    "birthday": "2006-11-20",
+    "status": "Active",
+    "description": "Increase blood whether listen. Concern join team culture nature any laugh."
+  },
+  {
+    "usercode": "U028",
+    "username": "user_28",
+    "email": "user28@example.com",
+    "password": "UserPass28",
+    "role": "admin",
+    "birthday": "1981-09-21",
+    "status": "Deactive",
+    "description": "Common citizen section audience him view challenge. Price available study."
+  },
+  {
+    "usercode": "U029",
+    "username": "user_29",
+    "email": "user29@example.com",
+    "password": "UserPass29",
+    "role": "user",
+    "birthday": "1989-01-21",
+    "status": "Deactive",
+    "description": "Result data decade. Street everybody cover. Any agent every must."
+  },
+  {
+    "usercode": "U030",
+    "username": "user_30",
+    "email": "user30@example.com",
+    "password": "UserPass30",
+    "role": "user",
+    "birthday": "1963-08-21",
+    "status": "Deactive",
+    "description": "Huge role price minute each use type less. Ask per cultural. Against benefit help ground treat."
+  },
+  {
+    "usercode": "U031",
+    "username": "user_31",
+    "email": "user31@example.com",
+    "password": "UserPass31",
+    "role": "admin",
+    "birthday": "2001-04-26",
+    "status": "Active",
+    "description": "Successful local protect federal.\nWhen in discuss difference. World friend how."
+  },
+  {
+    "usercode": "U032",
+    "username": "user_32",
+    "email": "user32@example.com",
+    "password": "UserPass32",
+    "role": "admin",
+    "birthday": "1978-06-03",
+    "status": "Deactive",
+    "description": "Much through begin fly. Group color they including environment along. Middle cut there law among."
+  },
+  {
+    "usercode": "U033",
+    "username": "user_33",
+    "email": "user33@example.com",
+    "password": "UserPass33",
+    "role": "user",
+    "birthday": "1961-08-28",
+    "status": "Deactive",
+    "description": "Majority lose wish himself attorney. No full national city."
+  },
+  {
+    "usercode": "U034",
+    "username": "user_34",
+    "email": "user34@example.com",
+    "password": "UserPass34",
+    "role": "user",
+    "birthday": "1970-05-04",
+    "status": "Deactive",
+    "description": "Continue forget bit still. Western again lose station particular people hold."
+  },
+  {
+    "usercode": "U035",
+    "username": "user_35",
+    "email": "user35@example.com",
+    "password": "UserPass35",
+    "role": "user",
+    "birthday": "1973-02-09",
+    "status": "Active",
+    "description": "I now author especially final. Peace rest idea buy mention prepare painting."
+  },
+  {
+    "usercode": "U036",
+    "username": "user_36",
+    "email": "user36@example.com",
+    "password": "UserPass36",
+    "role": "admin",
+    "birthday": "1961-02-10",
+    "status": "Deactive",
+    "description": "Many beautiful wear. Something outside behavior good someone section conference yard."
+  },
+  {
+    "usercode": "U037",
+    "username": "user_37",
+    "email": "user37@example.com",
+    "password": "UserPass37",
+    "role": "user",
+    "birthday": "1980-11-13",
+    "status": "Active",
+    "description": "Data president serious trial. Hand loss stay support different."
+  },
+  {
+    "usercode": "U038",
+    "username": "user_38",
+    "email": "user38@example.com",
+    "password": "UserPass38",
+    "role": "user",
+    "birthday": "1998-06-11",
+    "status": "Deactive",
+    "description": "According about top tough. Ever style foreign summer. Present save more never onto."
+  },
+  {
+    "usercode": "U039",
+    "username": "user_39",
+    "email": "user39@example.com",
+    "password": "UserPass39",
+    "role": "user",
+    "birthday": "1980-06-08",
+    "status": "Active",
+    "description": "Sound PM trip effort old heavy."
+  },
+  {
+    "usercode": "U040",
+    "username": "user_40",
+    "email": "user40@example.com",
+    "password": "UserPass40",
+    "role": "user",
+    "birthday": "1986-04-29",
+    "status": "Deactive",
+    "description": "Anything put official college chair meet. Speech thank black. Your lot only remain."
+  },
+  {
+    "usercode": "U041",
+    "username": "user_41",
+    "email": "user41@example.com",
+    "password": "UserPass41",
+    "role": "user",
+    "birthday": "1986-08-20",
+    "status": "Active",
+    "description": "Establish apply player fight them ball. State listen training free Mrs church maybe."
+  },
+  {
+    "usercode": "U042",
+    "username": "user_42",
+    "email": "user42@example.com",
+    "password": "UserPass42",
+    "role": "admin",
+    "birthday": "2005-08-26",
+    "status": "Deactive",
+    "description": "Year who son professional understand."
+  },
+  {
+    "usercode": "U043",
+    "username": "user_43",
+    "email": "user43@example.com",
+    "password": "UserPass43",
+    "role": "admin",
+    "birthday": "2002-05-13",
+    "status": "Deactive",
+    "description": "Other area chair food price television. Open risk ground campaign their upon issue role."
+  },
+  {
+    "usercode": "U044",
+    "username": "user_44",
+    "email": "user44@example.com",
+    "password": "UserPass44",
+    "role": "admin",
+    "birthday": "1989-03-23",
+    "status": "Deactive",
+    "description": "Attention minute clear vote white sometimes you. Stand the avoid yet western."
+  },
+  {
+    "usercode": "U045",
+    "username": "user_45",
+    "email": "user45@example.com",
+    "password": "UserPass45",
+    "role": "admin",
+    "birthday": "1971-04-19",
+    "status": "Deactive",
+    "description": "Road at action language interesting us the. Treatment let enough. Gun decision ask sister Mr hand."
+  },
+  {
+    "usercode": "U046",
+    "username": "user_46",
+    "email": "user46@example.com",
+    "password": "UserPass46",
+    "role": "admin",
+    "birthday": "1981-09-15",
+    "status": "Deactive",
+    "description": "Focus coach beat. Race figure painting friend say draw. Back at full memory gun so most."
+  },
+  {
+    "usercode": "U047",
+    "username": "user_47",
+    "email": "user47@example.com",
+    "password": "UserPass47",
+    "role": "user",
+    "birthday": "1998-11-01",
+    "status": "Active",
+    "description": "Republican national enjoy rather practice site common. West bad knowledge meet society."
+  },
+  {
+    "usercode": "U048",
+    "username": "user_48",
+    "email": "user48@example.com",
+    "password": "UserPass48",
+    "role": "admin",
+    "birthday": "1992-10-11",
+    "status": "Active",
+    "description": "Kitchen speech represent our religious make across. Bring question man commercial."
+  },
+  {
+    "usercode": "U049",
+    "username": "user_49",
+    "email": "user49@example.com",
+    "password": "UserPass49",
+    "role": "admin",
+    "birthday": "2000-11-04",
+    "status": "Deactive",
+    "description": "Thousand mean name. Affect hit space figure can reach rock."
+  },
+  {
+    "usercode": "U050",
+    "username": "user_50",
+    "email": "user50@example.com",
+    "password": "UserPass50",
+    "role": "admin",
+    "birthday": "2002-09-24",
+    "status": "Active",
+    "description": "Age whatever loss per lot project small. In TV final less."
+  },
+  {
+    "usercode": "U051",
+    "username": "user_51",
+    "email": "user51@example.com",
+    "password": "UserPass51",
+    "role": "user",
+    "birthday": "1984-01-21",
+    "status": "Active",
+    "description": "Attention huge identify appear. Budget white investment prevent."
+  },
+  {
+    "usercode": "U052",
+    "username": "user_52",
+    "email": "user52@example.com",
+    "password": "UserPass52",
+    "role": "user",
+    "birthday": "2007-03-23",
+    "status": "Deactive",
+    "description": "Cell prove culture.\nAgree collection year most author receive country."
+  },
+  {
+    "usercode": "U053",
+    "username": "user_53",
+    "email": "user53@example.com",
+    "password": "UserPass53",
+    "role": "user",
+    "birthday": "1986-06-01",
+    "status": "Deactive",
+    "description": "Of sport knowledge hard first sound page race. Subject form three everyone level."
+  },
+  {
+    "usercode": "U054",
+    "username": "user_54",
+    "email": "user54@example.com",
+    "password": "UserPass54",
+    "role": "user",
+    "birthday": "1990-01-19",
+    "status": "Deactive",
+    "description": "Write huge last her walk rich. Value could statement occur finally pick."
+  },
+  {
+    "usercode": "U055",
+    "username": "user_55",
+    "email": "user55@example.com",
+    "password": "UserPass55",
+    "role": "user",
+    "birthday": "1973-09-22",
+    "status": "Deactive",
+    "description": "Second physical sit term. Worry environmental continue catch leave media why beat."
+  },
+  {
+    "usercode": "U056",
+    "username": "user_56",
+    "email": "user56@example.com",
+    "password": "UserPass56",
+    "role": "admin",
+    "birthday": "1963-03-12",
+    "status": "Active",
+    "description": "Cost like son street she. Young how key value reality."
+  },
+  {
+    "usercode": "U057",
+    "username": "user_57",
+    "email": "user57@example.com",
+    "password": "UserPass57",
+    "role": "admin",
+    "birthday": "1993-08-10",
+    "status": "Active",
+    "description": "Animal key heart leave here. Save people boy major room. Drive federal not former."
+  },
+  {
+    "usercode": "U058",
+    "username": "user_58",
+    "email": "user58@example.com",
+    "password": "UserPass58",
+    "role": "user",
+    "birthday": "1985-08-31",
+    "status": "Active",
+    "description": "Political wall much position once ever. Themselves history east trial before. Over early heavy."
+  },
+  {
+    "usercode": "U059",
+    "username": "user_59",
+    "email": "user59@example.com",
+    "password": "UserPass59",
+    "role": "user",
+    "birthday": "1973-10-27",
+    "status": "Active",
+    "description": "Serve fire feel consider analysis late professor response. Leave least role when another."
+  },
+  {
+    "usercode": "U060",
+    "username": "user_60",
+    "email": "user60@example.com",
+    "password": "UserPass60",
+    "role": "admin",
+    "birthday": "1990-01-27",
+    "status": "Deactive",
+    "description": "Democrat adult occur report. Always see where might. Like best next foot population."
+  },
+  {
+    "usercode": "U061",
+    "username": "user_61",
+    "email": "user61@example.com",
+    "password": "UserPass61",
+    "role": "admin",
+    "birthday": "2000-01-24",
+    "status": "Active",
+    "description": "Number pay six your. Happy enough side."
+  },
+  {
+    "usercode": "U062",
+    "username": "user_62",
+    "email": "user62@example.com",
+    "password": "UserPass62",
+    "role": "user",
+    "birthday": "1997-02-13",
+    "status": "Deactive",
+    "description": "Fact drop spend industry remember manage. Write sure impact decision month then."
+  },
+  {
+    "usercode": "U063",
+    "username": "user_63",
+    "email": "user63@example.com",
+    "password": "UserPass63",
+    "role": "user",
+    "birthday": "2007-03-26",
+    "status": "Deactive",
+    "description": "Year garden right against law source style. Full state event born mention though name receive."
+  },
+  {
+    "usercode": "U064",
+    "username": "user_64",
+    "email": "user64@example.com",
+    "password": "UserPass64",
+    "role": "admin",
+    "birthday": "1959-06-28",
+    "status": "Active",
+    "description": "Skill range success change. Along executive store book group send professional."
+  },
+  {
+    "usercode": "U065",
+    "username": "user_65",
+    "email": "user65@example.com",
+    "password": "UserPass65",
+    "role": "user",
+    "birthday": "1972-10-04",
+    "status": "Deactive",
+    "description": "Hot law less fight bit scientist woman."
+  },
+  {
+    "usercode": "U066",
+    "username": "user_66",
+    "email": "user66@example.com",
+    "password": "UserPass66",
+    "role": "user",
+    "birthday": "1980-05-16",
+    "status": "Deactive",
+    "description": "Clear clear and center deep. Time service half security and choose pay."
+  },
+  {
+    "usercode": "U067",
+    "username": "user_67",
+    "email": "user67@example.com",
+    "password": "UserPass67",
+    "role": "user",
+    "birthday": "1981-10-28",
+    "status": "Deactive",
+    "description": "Discuss prepare help. Agreement happen start."
+  },
+  {
+    "usercode": "U068",
+    "username": "user_68",
+    "email": "user68@example.com",
+    "password": "UserPass68",
+    "role": "admin",
+    "birthday": "1986-03-14",
+    "status": "Active",
+    "description": "Blue director whose right human item remain. Time memory them must tend year. Pass his allow poor."
+  },
+  {
+    "usercode": "U069",
+    "username": "user_69",
+    "email": "user69@example.com",
+    "password": "UserPass69",
+    "role": "admin",
+    "birthday": "1980-12-04",
+    "status": "Deactive",
+    "description": "Kitchen fund her morning as."
+  },
+  {
+    "usercode": "U070",
+    "username": "user_70",
+    "email": "user70@example.com",
+    "password": "UserPass70",
+    "role": "user",
+    "birthday": "1983-03-18",
+    "status": "Active",
+    "description": "Occur place carry despite article official. Month between notice whom account."
+  },
+  {
+    "usercode": "U071",
+    "username": "user_71",
+    "email": "user71@example.com",
+    "password": "UserPass71",
+    "role": "user",
+    "birthday": "1978-05-19",
+    "status": "Active",
+    "description": "Energy use cell fine charge help. Meeting beat voice."
+  },
+  {
+    "usercode": "U072",
+    "username": "user_72",
+    "email": "user72@example.com",
+    "password": "UserPass72",
+    "role": "admin",
+    "birthday": "1977-09-15",
+    "status": "Active",
+    "description": "New matter lay magazine front fly remain. Where high rather leader wear value."
+  },
+  {
+    "usercode": "U073",
+    "username": "user_73",
+    "email": "user73@example.com",
+    "password": "UserPass73",
+    "role": "admin",
+    "birthday": "1975-10-16",
+    "status": "Active",
+    "description": "The card hour their different. Scene nice someone fear computer water."
+  },
+  {
+    "usercode": "U074",
+    "username": "user_74",
+    "email": "user74@example.com",
+    "password": "UserPass74",
+    "role": "user",
+    "birthday": "1998-05-13",
+    "status": "Deactive",
+    "description": "Summer street enough box discussion how seek finish. Road trial operation upon skin great."
+  },
+  {
+    "usercode": "U075",
+    "username": "user_75",
+    "email": "user75@example.com",
+    "password": "UserPass75",
+    "role": "user",
+    "birthday": "1963-12-15",
+    "status": "Active",
+    "description": "Be both study page seat city continue southern. Be city theory network provide stage."
+  },
+  {
+    "usercode": "U076",
+    "username": "user_76",
+    "email": "user76@example.com",
+    "password": "UserPass76",
+    "role": "admin",
+    "birthday": "1984-02-11",
+    "status": "Active",
+    "description": "Read computer nature drug none night part."
+  },
+  {
+    "usercode": "U077",
+    "username": "user_77",
+    "email": "user77@example.com",
+    "password": "UserPass77",
+    "role": "user",
+    "birthday": "1977-04-02",
+    "status": "Active",
+    "description": "Kitchen have PM morning financial. Food and attack sport return quite. She cup coach."
+  },
+  {
+    "usercode": "U078",
+    "username": "user_78",
+    "email": "user78@example.com",
+    "password": "UserPass78",
+    "role": "admin",
+    "birthday": "1980-08-23",
+    "status": "Deactive",
+    "description": "Prevent politics reflect structure ball wide. Whether week me program article bar maintain leader."
+  },
+  {
+    "usercode": "U079",
+    "username": "user_79",
+    "email": "user79@example.com",
+    "password": "UserPass79",
+    "role": "admin",
+    "birthday": "1998-04-14",
+    "status": "Deactive",
+    "description": "Heart think would office exactly myself. Happen perhaps quality."
+  },
+  {
+    "usercode": "U080",
+    "username": "user_80",
+    "email": "user80@example.com",
+    "password": "UserPass80",
+    "role": "user",
+    "birthday": "1966-07-05",
+    "status": "Deactive",
+    "description": "Daughter modern onto woman just. Especially concern on wide traditional police yes allow."
+  },
+  {
+    "usercode": "U081",
+    "username": "user_81",
+    "email": "user81@example.com",
+    "password": "UserPass81",
+    "role": "user",
+    "birthday": "1989-09-11",
+    "status": "Deactive",
+    "description": "Finally break toward natural when television they treatment. Positive page seat toward check."
+  },
+  {
+    "usercode": "U082",
+    "username": "user_82",
+    "email": "user82@example.com",
+    "password": "UserPass82",
+    "role": "user",
+    "birthday": "1968-03-15",
+    "status": "Active",
+    "description": "Responsibility standard small. Understand develop play from worker like. Always nice see network."
+  },
+  {
+    "usercode": "U083",
+    "username": "user_83",
+    "email": "user83@example.com",
+    "password": "UserPass83",
+    "role": "user",
+    "birthday": "1965-11-18",
+    "status": "Deactive",
+    "description": "Ever final various fund debate way push. Onto blood blue rise make. Prove condition around."
+  },
+  {
+    "usercode": "U084",
+    "username": "user_84",
+    "email": "user84@example.com",
+    "password": "UserPass84",
+    "role": "admin",
+    "birthday": "1980-11-29",
+    "status": "Deactive",
+    "description": "Measure miss lose condition.\nRange catch her send door reflect agree."
+  },
+  {
+    "usercode": "U085",
+    "username": "user_85",
+    "email": "user85@example.com",
+    "password": "UserPass85",
+    "role": "admin",
+    "birthday": "1962-09-19",
+    "status": "Active",
+    "description": "Up market occur themselves. Idea affect actually some. Better surface budget lose his share."
+  },
+  {
+    "usercode": "U086",
+    "username": "user_86",
+    "email": "user86@example.com",
+    "password": "UserPass86",
+    "role": "user",
+    "birthday": "1995-01-20",
+    "status": "Active",
+    "description": "Until night third thing concern including college. Read spend third decade."
+  },
+  {
+    "usercode": "U087",
+    "username": "user_87",
+    "email": "user87@example.com",
+    "password": "UserPass87",
+    "role": "user",
+    "birthday": "1962-10-04",
+    "status": "Active",
+    "description": "Group education sport book rise late green. Raise child little car few."
+  },
+  {
+    "usercode": "U088",
+    "username": "user_88",
+    "email": "user88@example.com",
+    "password": "UserPass88",
+    "role": "user",
+    "birthday": "1977-04-04",
+    "status": "Deactive",
+    "description": "Sometimes compare table serious significant. Member rest least five."
+  },
+  {
+    "usercode": "U089",
+    "username": "user_89",
+    "email": "user89@example.com",
+    "password": "UserPass89",
+    "role": "user",
+    "birthday": "1979-04-22",
+    "status": "Active",
+    "description": "Family stop might risk discussion question meeting. Enjoy performance way safe call a."
+  },
+  {
+    "usercode": "U090",
+    "username": "user_90",
+    "email": "user90@example.com",
+    "password": "UserPass90",
+    "role": "admin",
+    "birthday": "1962-01-21",
+    "status": "Active",
+    "description": "Determine follow enter stock him value paper vote."
+  },
+  {
+    "usercode": "U091",
+    "username": "user_91",
+    "email": "user91@example.com",
+    "password": "UserPass91",
+    "role": "user",
+    "birthday": "1965-11-18",
+    "status": "Active",
+    "description": "Run series range artist."
+  },
+  {
+    "usercode": "U092",
+    "username": "user_92",
+    "email": "user92@example.com",
+    "password": "UserPass92",
+    "role": "user",
+    "birthday": "1964-03-12",
+    "status": "Active",
+    "description": "Detail want view process likely."
+  },
+  {
+    "usercode": "U093",
+    "username": "user_93",
+    "email": "user93@example.com",
+    "password": "UserPass93",
+    "role": "user",
+    "birthday": "1994-02-25",
+    "status": "Active",
+    "description": "Dog job have board recognize popular. Strategy new also on wonder. Imagine song general whatever."
+  },
+  {
+    "usercode": "U094",
+    "username": "user_94",
+    "email": "user94@example.com",
+    "password": "UserPass94",
+    "role": "user",
+    "birthday": "1961-11-18",
+    "status": "Active",
+    "description": "Trip enter style simply. Whose unit we fund. Low against bad happen ago should."
+  },
+  {
+    "usercode": "U095",
+    "username": "user_95",
+    "email": "user95@example.com",
+    "password": "UserPass95",
+    "role": "admin",
+    "birthday": "1967-07-21",
+    "status": "Deactive",
+    "description": "Process support measure forget story pull. Message discover less tough."
+  },
+  {
+    "usercode": "U096",
+    "username": "user_96",
+    "email": "user96@example.com",
+    "password": "UserPass96",
+    "role": "admin",
+    "birthday": "1976-11-02",
+    "status": "Deactive",
+    "description": "Order ready system push day. However stock especially college."
+  },
+  {
+    "usercode": "U097",
+    "username": "user_97",
+    "email": "user97@example.com",
+    "password": "UserPass97",
+    "role": "user",
+    "birthday": "1977-06-07",
+    "status": "Active",
+    "description": "Ask mention six positive add follow interesting. Indeed foreign off effort side law surface."
+  },
+  {
+    "usercode": "U098",
+    "username": "user_98",
+    "email": "user98@example.com",
+    "password": "UserPass98",
+    "role": "user",
+    "birthday": "1982-08-15",
+    "status": "Deactive",
+    "description": "Good people mother environmental right. Compare exist sport level animal special."
+  },
+  {
+    "usercode": "U099",
+    "username": "user_99",
+    "email": "user99@example.com",
+    "password": "UserPass99",
+    "role": "admin",
+    "birthday": "2007-05-22",
+    "status": "Deactive",
+    "description": "Similar car form land task. Camera test new accept serve chance."
+  },
+  {
+    "usercode": "U100",
+    "username": "user_100",
+    "email": "user100@example.com",
+    "password": "UserPass100",
+    "role": "admin",
+    "birthday": "1987-09-06",
+    "status": "Active",
+    "description": "Least benefit bad cup eye blood six. Radio clearly seat stage need pass toward."
+  }

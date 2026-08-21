@@ -1,67 +1,72 @@
-.sign-in-main{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sign-up-main {
     width: 300px;
     margin: 100px auto 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
-.sign-in-main .logo{
+.sign-up-main .logo {
     display: block;
     margin: 0 auto;
     width: 150px;
 }
 
-.sign-in-main .sign-in-message{
+.sign-up-main .sign-up-message {
     font-size: 26px;
     text-align: left;
     margin-top: 24px;
 }
 
-.sign-in-main #sign-in-form{
+.sign-up-main .sign-up-form {
     margin-top: 18px;
 }
 
-#sign-in-form #email,
-#sign-in-form #password{
+.sign-up-form input {
     width: 100%;
     border: 1px solid #dee2e6;
     padding: 18px 12px;
     font-size: 16px;
+    outline: none;
 }
 
-#sign-in-form input::placeholder{
+.sign-up-form input::placeholder {
     color: #212529;
 }
 
-#sign-in-form #email{
+.sign-up-form #email {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border-bottom: none;
 }
 
-#sign-in-form #password{
+.sign-up-form #username {
+    border-bottom: none;
+}
+
+.sign-up-form #password {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
-#sign-in-form .save-loggin{
-    display: flex;
-    align-items: center;
+.sign-up-form .switch-form-text {
+    font-size: 14px;
     margin: 16px 0;
-    justify-content: flex-start;
+    text-align: left;
+    color: #212529;
 }
 
-#sign-in-form #save-loggin-checkbox,
-#sign-in-form input[type="checkbox"] {
-    width: auto;
-    margin-right: 6px;
-}
-
-#sign-in-form .signup-link{
+.sign-up-form .signin-link {
     color: #0d6efd;
+    text-decoration: underline;
 }
 
-#sign-in-form .btn{
+.sign-up-form .btn {
     width: 100%;
     background-color: #0d6efd;
     color: #fff;
@@ -72,118 +77,147 @@
     transition: transform 0.5s ease-out;
 }
 
-.btn:hover{
+.sign-up-form .btn:hover {
     cursor: pointer;
-    transform: scale(1.1,1.1);
+    transform: scale(1.1, 1.1);
 }
 
-.sign-in-main .sign-in-footer{
-    color: rgba(33,37,41,0.75);
+.sign-up-main .sign-up-footer {
+    margin-top: 28px;
+    text-align: center;
+    color: rgba(33, 37, 41, 0.75);
 }
 
-#msg{
+/* Msg & Toast notifications */
+#msg {
     position: fixed;
     opacity: 0;
     transition: all 0.5s ease;
     transform: translateX(-100%);
+    z-index: 999;
 }
 
-#msg.show{
+#msg.show {
     opacity: 1;
     transform: translateX(0);
     top: 22px;
     left: 26px;
 }
 
-#msg #login-validation {
+#msg #sign-up-validation {
     font-family: 'Inter', sans-serif;
     background-color: #ffe5e8;
     border-radius: 10px;
     padding: 16px;
 }
 
-#login-validation .login-validation-header{
+.sign-up-validation-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
 }
 
-.login-validation-header .fa-circle-minus{
+.sign-up-validation-header .fa-circle-minus {
     color: #e8132a;
-    text-align: right;
     font-size: 16px;
 }
 
-.login-validation-header p{
+.sign-up-validation-header p {
     font-size: 16px;
     font-weight: 500;
     width: 100%;
 }
 
-.login-validation-header .close-btn{
+.sign-up-validation-header .close-btn {
     padding: 2px;
     color: #445275;
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(255, 255, 255, 0.35);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.login-validation .login-validation-content {
+.sign-up-validation-content {
     font-size: 14px;
     line-height: 1.5;
     padding: 0 24px;
     margin-top: 8px;
 }
 
-#msg #login-toast{
+#msg #sign-up-toast {
     background-color: #e5fff0;
     padding: 16px 16px 18px;
     margin-top: 20px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
-#login-toast .fa-circle-check{
+#sign-up-toast .fa-circle-check {
     color: #02ee6a;
     font-size: 20px;
-    margin-right: 3px;
+    margin-right: 8px;
 }
 
-#login-toast .toast-title{
+#sign-up-toast .toast-title {
     font-size: 14px;
 }
 
-#msg #login-error{
+#msg #sign-up-error {
     background-color: #ffe5e8;
     padding: 16px 16px 18px;
     margin-top: 20px;
     border-radius: 10px;
 }
 
-#login-error .fa-circle-exclamation{
+#sign-up-error .fa-circle-exclamation {
     color: #e8132a;
     font-size: 20px;
-    margin-right: 3px;
+    margin-right: 6px;
 }
 
-#login-error .error-title{
+#sign-up-error .error-title {
     font-size: 14px;
 }
 
+#sign-up-error > div {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+}
+
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+.password-field-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field-wrapper input {
+    padding-right: 40px; /* Chừa khoảng trống để icon không đè lên chữ */
+}
+
+.password-field-wrapper .eye-icon {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #6c757d;
 }
 
 @media (max-width: 768px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .sign-in-main {
-    margin: 0;
-  }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .sign-up-main {
+        margin: 0;
+    }
 }
