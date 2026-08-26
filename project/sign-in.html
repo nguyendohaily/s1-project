@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet" href="./sign-in.css"/>
+    <link rel="stylesheet" href="./sign-in.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Sign in</title>
 </head>
 <body>
     <main class="sign-in-main"> 
-        <img src="link logo.png" alt="Logo" class="logo" />    <!-- ảnh logo -->
+        <img src="../assets/images/dashboard-logo.png" alt="Logo" class="logo" />
         <p class="sign-in-message">Please sign in </p>
         
         <form id="sign-in-form">
@@ -21,7 +22,7 @@
                 <label for="save-loggin-checkbox" class="save-loggin-text">Remember me</label>
             </div>
             <p>
-            Don"t have an account, <a class="signup-link" href="link signup html">click here!</a>    <!-- link sign up html -->
+                Don't have an account, <a class="signup-link" href="./sign-up.html">click here!</a>   
             </p>
             <button type="submit" class="btn">Sign in</button>
         </form>
@@ -35,13 +36,13 @@
                 <i class="fa-solid fa-circle-minus"></i>
                 <p>Error</p>
                 <div class="close-btn" id="close-validation-btn" style="cursor: pointer;">
-                    <img src="...link icon error.png" alt="close" /> <!-- ảnh icon error -->
+                    <i class="fa-solid fa-circle-xmark"></i>
                 </div>
             </div>
 
             <div class="login-validation-content">
-                <p class="password-cannot-blank">Mật khẩu không được bỏ trống</p>
-                <p class="email-cannot-blank">Email không được bỏ trống</p>
+                <p class="email-cannot-blank hidden">Email không được bỏ trống</p>
+                <p class="password-cannot-blank hidden">Mật khẩu không được bỏ trống</p>
             </div>
         </div>
 
@@ -57,6 +58,5 @@
     </div>
 
     <script src="./sign-in.js"></script>
-
 </body>
 </html>

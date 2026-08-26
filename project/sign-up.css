@@ -193,21 +193,26 @@
     display: none !important;
 }
 
-.password-field-wrapper {
+.password-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
+    width: 100%;
 }
 
-.password-field-wrapper input {
-    padding-right: 40px; /* Chừa khoảng trống để icon không đè lên chữ */
-}
-
-.password-field-wrapper .eye-icon {
+.password-wrapper .fa-eye,
+.password-wrapper .fa-eye-slash {
     position: absolute;
-    right: 12px;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0d6efd;
     cursor: pointer;
-    color: #6c757d;
+    font-size: 15px;
+}
+
+/* Tắt icon mặc định của Edge/Chrome */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none !important;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/icons/trello-favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="./add-user.css" />
+  <title>Add user</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="dashboard-logo">
+      <img src="../assets/images/dashboard-logo.png" alt="trello_dashboard" />
+    </div>
+    <div class="dashboard-header-empty"></div>
+  </header>
+
+  <div id="body-container">
+    <div id="side-container">
+      <h6 class="side-container-title">your dashboard</h6>
+      <div class="dashboard-list user-dashboard">
+        <img src="../assets/icons/user-dashboard-icon.png" alt="User_dashboard" />
+        <a href="./dashboard.html" class="user-dashboard-link">User dashboard</a>
+      </div>
+      <div class="dashboard-list new-user">
+        <img src="../assets/icons/add-new-user-icon.png" alt="Add_new_user" />
+        <a href="./add-user.html" class="add-new-user-link">Add new user</a>
+      </div>
+      <div class="dashboard-list sign-out">
+        <img src="../assets/icons/sign-out-icon.png" alt="Sign_out" />
+        <a href="./sign-in.html" class="sign-out-link">Sign out</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="main-title-div">
+        <i class="fa-solid fa-bars"></i>
+        <h1>User Management</h1>
+      </div>
+
+      <p class="page-title">Add new user</p>
+
+      <form id="add-new-user-form">
+        <div class="form-row-two-cols">
+          <div class="input-element">
+            <label>User code</label>
+            <input type="text" id="user-code" name="user-code" disabled />
+          </div>
+          <div class="input-element">
+            <label>User name</label>
+            <input type="text" id="username" name="username" />
+          </div>
+        </div>
+        <div class="form-row-two-cols">
+          <div class="input-element">
+            <label>Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="input-element password-input">
+            <label>Password</label>
+            <input type="password" id="password" name="password" />
+            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-eye-slash"></i>
+          </div>
+        </div>
+        <div class="form-row-three-cols">
+          <div class="input-element">
+            <label>Role</label>
+            <select name="role" id="role">
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+            </select>
+          </div>
+          <div class="input-element">
+            <label>Birthday</label>
+            <input type="date" id="dob" name="dob" />
+          </div>
+          <div class="input-element">
+            <label>Status</label>
+            <div class="status-option">
+              <input type="radio" id="status-active" name="status" value="Active" checked />
+              <label for="status-active" class="status-label">Active</label>
+              <input type="radio" id="status-deactive" name="status" value="Deactive" />
+              <label for="status-deactive" class="status-label">Deactive</label>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <label>Description</label>
+          <textarea name="description" class="description-text-input"></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="form-btn back-btn">Back</button>
+          <button class="form-btn add-btn" type="submit">Add +</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <div id="msg">
+    <div id="add-toast" class="hidden">
+      <i class="fa-solid fa-circle-check"></i>
+      <span class="toast-title">Thêm user thành công</span>
+    </div>
+
+    <div id="add-error" class="hidden">
+      <div class="email-username-password-empty hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-message">Email, Username và Password không được để trống</span>
+      </div>
+      <div class="email-exist hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-title">Email đã tồn tại. Đến trang đăng nhập!</span>
+      </div>
+      <div class="email-error hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-title">Email không đúng định dạng</span>
+      </div>
+      <div class="password-min-length-error hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-message">Mật khẩu tối thiểu 8 ký tự</span>
+      </div>
+      <div class="password-number-required-error hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-message">Mật khẩu phải bao gồm cả chữ số</span>
+      </div>
+      <div class="password-uppercase-lowercase-error hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-message">Mật khẩu có cả chữ thường và chữ hoa</span>
+      </div>
+      <div class="role-not-admin hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span class="add-error-message">Không đủ quyền để add user</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./add-user.js"></script>
+</body>
+
+</html>

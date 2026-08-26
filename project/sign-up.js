@@ -1,222 +1,229 @@
-// 1. Lấy dữ liệu users từ localStorage ('userList')
-function getUserList() {
-  return JSON.parse(localStorage.getItem("userList")) || [];
-}
-
-// Hàm sinh mã định danh cho người dùng
-function generateUserCode(userList) {
-  return "USER_" + (userList.length + 1) + "_" + Date.now();
-}
-
-// 2. Lấy các phần tử DOM cần thiết
-const signupForm = document.querySelector(".sign-up-form");
-const emailInput = document.querySelector("#email");
-const usernameInput = document.querySelector("#username");
-const passwordInput = document.querySelector("#password");
-
-// Khung chứa thông báo cha
-const msgContainer = document.querySelector("#msg");
-
-// Các phần tử thông báo lỗi và trạng thái
-const signupValidation = document.querySelector("#sign-up-validation");
-const userBlankMsg = document.querySelector(".username-cannot-blank");
-const emailBlankMsg = document.querySelector(".email-cannot-blank");
-const passBlankMsg = document.querySelector(".password-cannot-blank");
-
-const signupToast = document.querySelector("#sign-up-toast");
-const signupError = document.querySelector("#sign-up-error");
-
-const emailExistMsg = document.querySelector(".email-exist");
-const emailErrorMsg = document.querySelector(".email-error");
-
-const passwordMinLengthMsg = document.querySelector(".password-min-length-error");
-const passwordNumberRequiredMsg = document.querySelector(".password-number-required-error");
-const passwordCaseMsg = document.querySelector(".password-uppercase-lowercase-error");
-
-const closeBtn = document.querySelector(".close-btn");
-
-// 3. Hàm reset/ẩn tất cả thông báo
-function resetErrorMsg() {
-  if (msgContainer) msgContainer.classList.remove("show");
-
-  const elementsToHide = [
-    signupValidation,
-    signupToast,
-    signupError,
-    userBlankMsg,
-    emailBlankMsg,
-    passBlankMsg,
-    emailExistMsg,
-    emailErrorMsg,
-    passwordMinLengthMsg,
-    passwordNumberRequiredMsg,
-    passwordCaseMsg,
-  ];
-
-  elementsToHide.forEach((el) => {
-    if (el) el.classList.add("hidden");
-  });
-}
-
-// 4. Hàm kiểm tra rỗng (isEmpty)
-function isEmpty() {
-  const emailVal = emailInput.value.trim();
-  const usernameVal = usernameInput.value.trim();
-  const passwordVal = passwordInput.value.trim();
-
-  let hasEmpty = false;
-
-  if (!usernameVal) {
-    if (userBlankMsg) userBlankMsg.classList.remove("hidden");
-    hasEmpty = true;
-  }
-  if (!emailVal) {
-    if (emailBlankMsg) emailBlankMsg.classList.remove("hidden");
-    hasEmpty = true;
-  }
-  if (!passwordVal) {
-    if (passBlankMsg) passBlankMsg.classList.remove("hidden");
-    hasEmpty = true;
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Lấy dữ liệu từ localStorage ('userList')
+  function getUserList() {
+    try {
+      return JSON.parse(localStorage.getItem("userList")) || [];
+    } catch {
+      return [];
+    }
   }
 
-  if (hasEmpty) {
-    if (signupValidation) signupValidation.classList.remove("hidden");
-    if (msgContainer) msgContainer.classList.add("show");
+  // Tạo usercode tịnh tiến TR001, TR002... đồng bộ toàn hệ thống
+  function generateUserCode(userList) {
+    if (!userList || userList.length === 0) return "TR001";
+
+    let maxNumber = 0;
+    userList.forEach((u) => {
+      const code = (u.usercode || u.userCode || "").trim().toUpperCase();
+      const match = code.match(/\d+/);
+      if (match) {
+        const num = parseInt(match[0], 10);
+        if (num > maxNumber) maxNumber = num;
+      }
+    });
+
+    return `TR${String(maxNumber + 1).padStart(3, "0")}`;
   }
 
-  return hasEmpty;
-}
+  // 2. Lấy các phần tử DOM
+  const signupForm = document.querySelector(".sign-up-form");
+  const emailInput = document.querySelector("#email");
+  const usernameInput = document.querySelector("#username");
+  const passwordInput = document.querySelector("#password");
 
-// 5. Hàm kiểm tra định dạng email
-function isValidationEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isValid = emailRegex.test(email.trim());
+  const msgContainer = document.querySelector("#msg");
+  const signupValidation = document.querySelector("#sign-up-validation");
+  const userBlankMsg = document.querySelector(".username-cannot-blank");
+  const emailBlankMsg = document.querySelector(".email-cannot-blank");
+  const passBlankMsg = document.querySelector(".password-cannot-blank");
 
-  if (!isValid) {
-    if (emailErrorMsg) emailErrorMsg.classList.remove("hidden");
-    if (signupError) signupError.classList.remove("hidden");
-    if (msgContainer) msgContainer.classList.add("show");
-  }
-  return isValid;
-}
+  const signupToast = document.querySelector("#sign-up-toast");
+  const signupError = document.querySelector("#sign-up-error");
+  const emailExistMsg = document.querySelector(".email-exist");
+  const emailErrorMsg = document.querySelector(".email-error");
 
-// 6. Hàm kiểm tra email đã tồn tại
-function isExistEmail(email) {
-  const userList = getUserList();
-  const emailExists = userList.some(
-    (user) => user.email.toLowerCase() === email.trim().toLowerCase()
-  );
+  const passwordMinLengthMsg = document.querySelector(".password-min-length-error");
+  const passwordNumberRequiredMsg = document.querySelector(".password-number-required-error");
+  const passwordCaseMsg = document.querySelector(".password-uppercase-lowercase-error");
+  const closeBtn = document.querySelector(".close-btn");
 
-  if (emailExists) {
-    if (emailExistMsg) emailExistMsg.classList.remove("hidden");
-    if (signupError) signupError.classList.remove("hidden");
-    if (msgContainer) msgContainer.classList.add("show");
-  }
-  return emailExists;
-}
+  const eye = document.querySelector(".fa-eye");
+  const eyeSlash = document.querySelector(".fa-eye-slash");
 
-// 7. Hàm kiểm tra độ mạnh mật khẩu
-function isPasswordValid(password) {
-  const minLength = password.length >= 8;
-  const hasNumber = /\d/.test(password);
-  const hasUpperCaseAndLowerCase = /[A-Z]/.test(password) && /[a-z]/.test(password);
+  // 3. Hàm reset thông báo lỗi
+  function resetErrorMsg() {
+    if (msgContainer) msgContainer.classList.remove("show");
 
-  let isValid = true;
+    const elementsToHide = [
+      signupValidation,
+      signupToast,
+      signupError,
+      userBlankMsg,
+      emailBlankMsg,
+      passBlankMsg,
+      emailExistMsg,
+      emailErrorMsg,
+      passwordMinLengthMsg,
+      passwordNumberRequiredMsg,
+      passwordCaseMsg,
+    ];
 
-  if (!minLength) {
-    if (passwordMinLengthMsg) passwordMinLengthMsg.classList.remove("hidden");
-    isValid = false;
-  }
-  if (!hasNumber) {
-    if (passwordNumberRequiredMsg) passwordNumberRequiredMsg.classList.remove("hidden");
-    isValid = false;
-  }
-  if (!hasUpperCaseAndLowerCase) {
-    if (passwordCaseMsg) passwordCaseMsg.classList.remove("hidden");
-    isValid = false;
+    elementsToHide.forEach((el) => {
+      if (el) el.classList.add("hidden");
+    });
   }
 
-  if (!isValid) {
-    if (signupError) signupError.classList.remove("hidden");
-    if (msgContainer) msgContainer.classList.add("show");
-  }
-
-  return isValid;
-}
-
-// 8. Bắt sự kiện submit form
-if (signupForm) {
-  signupForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    resetErrorMsg();
-
+  // 4. Hàm kiểm tra rỗng
+  function isEmpty() {
     const emailVal = emailInput.value.trim();
     const usernameVal = usernameInput.value.trim();
-    const passwordVal = passwordInput.value;
+    const passwordVal = passwordInput.value.trim();
 
-    // 1. Kiểm tra để trống
-    if (isEmpty()) return;
+    let hasEmpty = false;
 
-    // 2. Kiểm tra định dạng & trùng lặp email
-    const validEmail = isValidationEmail(emailVal);
-    let existEmail = false;
-    if (validEmail) {
-      existEmail = isExistEmail(emailVal);
+    if (!usernameVal) {
+      if (userBlankMsg) userBlankMsg.classList.remove("hidden");
+      hasEmpty = true;
+    }
+    if (!emailVal) {
+      if (emailBlankMsg) emailBlankMsg.classList.remove("hidden");
+      hasEmpty = true;
+    }
+    if (!passwordVal) {
+      if (passBlankMsg) passBlankMsg.classList.remove("hidden");
+      hasEmpty = true;
     }
 
-    // 3. Kiểm tra mật khẩu
-    const validPassword = isPasswordValid(passwordVal);
+    if (hasEmpty) {
+      if (signupValidation) signupValidation.classList.remove("hidden");
+      if (msgContainer) msgContainer.classList.add("show");
+    }
 
-    if (!validEmail || existEmail || !validPassword) return;
+    return hasEmpty;
+  }
 
-    // 4. Lưu vào LocalStorage
+  // 5. Hàm kiểm tra email hợp lệ
+  function isValidationEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(email.trim());
+
+    if (!isValid) {
+      if (emailErrorMsg) emailErrorMsg.classList.remove("hidden");
+      if (signupError) signupError.classList.remove("hidden");
+      if (msgContainer) msgContainer.classList.add("show");
+    }
+    return isValid;
+  }
+
+  // 6. Hàm kiểm tra email trùng
+  function isExistEmail(email) {
     const userList = getUserList();
-    const newUser = {
-      userCode: generateUserCode(userList),
-      email: emailVal,
-      username: usernameVal,
-      password: passwordVal,
-    };
+    const emailExists = userList.some(
+      (user) => (user.email || "").toLowerCase() === email.trim().toLowerCase()
+    );
 
-    userList.push(newUser);
-    localStorage.setItem("userList", JSON.stringify(userList));
+    if (emailExists) {
+      if (emailExistMsg) emailExistMsg.classList.remove("hidden");
+      if (signupError) signupError.classList.remove("hidden");
+      if (msgContainer) msgContainer.classList.add("show");
+    }
+    return emailExists;
+  }
 
-    // 5. Hiện toast thông báo thành công
-    if (signupToast) signupToast.classList.remove("hidden");
-    if (msgContainer) msgContainer.classList.add("show");
+  // 7. Hàm kiểm tra độ mạnh mật khẩu
+  function isPasswordValid(password) {
+    const minLength = password.length >= 8;
+    const hasNumber = /\d/.test(password);
+    const hasUpperAndLower = /[A-Z]/.test(password) && /[a-z]/.test(password);
 
+    let isValid = true;
 
-    setTimeout(() => {
-      window.location.href = "sign-in.html";
-    }, 1200);
+    if (!minLength) {
+      if (passwordMinLengthMsg) passwordMinLengthMsg.classList.remove("hidden");
+      isValid = false;
+    }
+    if (!hasNumber) {
+      if (passwordNumberRequiredMsg) passwordNumberRequiredMsg.classList.remove("hidden");
+      isValid = false;
+    }
+    if (!hasUpperAndLower) {
+      if (passwordCaseMsg) passwordCaseMsg.classList.remove("hidden");
+      isValid = false;
+    }
+
+    if (!isValid) {
+      if (signupError) signupError.classList.remove("hidden");
+      if (msgContainer) msgContainer.classList.add("show");
+    }
+
+    return isValid;
+  }
+
+  // 8. Sự kiện submit form
+  if (signupForm) {
+    signupForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      resetErrorMsg();
+
+      const emailVal = emailInput.value.trim();
+      const usernameVal = usernameInput.value.trim();
+      const passwordVal = passwordInput.value;
+
+      if (isEmpty()) return;
+      if (!isValidationEmail(emailVal)) return;
+      if (isExistEmail(emailVal)) return;
+      if (!isPasswordValid(passwordVal)) return;
+
+      const userList = getUserList();
+
+      // Cấu trúc user đồng bộ hoàn toàn với dashboard và edit
+      const newUser = {
+        usercode: generateUserCode(userList),
+        username: usernameVal,
+        email: emailVal,
+        password: passwordVal,
+        role: "user",
+        birthday: "",
+        status: "Active",
+        description: ""
+      };
+
+      userList.push(newUser);
+      localStorage.setItem("userList", JSON.stringify(userList));
+
+      if (signupToast) signupToast.classList.remove("hidden");
+      if (msgContainer) msgContainer.classList.add("show");
+
+      setTimeout(() => {
+        window.location.href = "./sign-in.html";
+      }, 1000);
+    });
+  }
+
+  // 9. Hiện / Ẩn mật khẩu
+  if (eye && eyeSlash && passwordInput) {
+    eye.addEventListener("click", () => {
+      passwordInput.type = "text";
+      eye.classList.add("hidden");
+      eyeSlash.classList.remove("hidden");
+    });
+
+    eyeSlash.addEventListener("click", () => {
+      passwordInput.type = "password";
+      eyeSlash.classList.add("hidden");
+      eye.classList.remove("hidden");
+    });
+  }
+
+  // 10. Nút đóng popup lỗi
+  if (closeBtn) {
+    closeBtn.addEventListener("click", resetErrorMsg);
+  }
+
+  // 11. Tắt lỗi khi nhập lại
+  [emailInput, usernameInput, passwordInput].forEach((input) => {
+    if (input) {
+      input.addEventListener("input", resetErrorMsg);
+    }
   });
-}
-
-// 9. Chức năng hiện/ẩn mật khẩu (show/hide password toggle) đâu
-// Lấy các phần tử icon mắt
-const eye = document.querySelector(".fa-eye");
-const eyeSlash = document.querySelector(".fa-eye-slash");
-
-function togglePassword() {
-  if (!passwordInput) return;
-  const isPassword = passwordInput.type === "password";
-  
-
-  passwordInput.type = isPassword ? "text" : "password";
-
-
-  if (eye && eyeSlash) {
-    eye.classList.toggle("hidden", isPassword);
-    eyeSlash.classList.toggle("hidden", !isPassword);
-  }
-}
-
-if (eye) eye.addEventListener("click", togglePassword);
-if (eyeSlash) eyeSlash.addEventListener("click", togglePassword);
-
-// 10. Tự động tắt lỗi khi gõ lại
-[emailInput, usernameInput, passwordInput].forEach((input) => {
-  if (input) {
-    input.addEventListener("input", resetErrorMsg);
-  }
 });

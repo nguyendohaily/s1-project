@@ -9,14 +9,18 @@
 </head>
 <body>
     <main class="sign-up-main">
-        <img src="logo.png" alt="Logo" class="logo"> 
+        <img src="../assets/images/dashboard-logo.png" alt="Logo" class="logo"> 
         <p class="sign-up-message">Please sign up</p>
         
-        <form action="./sign-up.form" method="POST" class="sign-up-form">
+        <form class="sign-up-form">
             <div class="input-div">
-                <input type="email" id="email" name="email" placeholder="Email address" required>
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="email" id="email" name="email" placeholder="Email address">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash hidden"></i>
+                </div>
             </div>
 
             <p class="switch-form-text">
@@ -24,7 +28,6 @@
             </p>
             
             <button type="submit" class="btn">Sign up</button>
-
         </form>
 
         <p class="sign-up-footer">&copy; 2025 - Rikkei Education</p>
@@ -38,9 +41,9 @@
                 <i class="fa-solid fa-circle-xmark close-btn"></i>
             </div>
             <div class="sign-up-validation-content">
-                <p class="username-cannot-blank">Tên người dùng không được để trống</p>
-                <p class="email-cannot-blank">Email không được để trống</p>
-                <p class="password-cannot-blank">Mật khẩu không được để trống</p>
+                <p class="username-cannot-blank hidden">Tên người dùng không được để trống</p>
+                <p class="email-cannot-blank hidden">Email không được để trống</p>
+                <p class="password-cannot-blank hidden">Mật khẩu không được để trống</p>
             </div>
         </div>
 

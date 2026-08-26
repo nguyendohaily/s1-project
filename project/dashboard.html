@@ -1,0 +1,81 @@
+1. File dashboard.html
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./dashboard.css" />
+  <title>Dashboard</title>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="dashboard-logo">
+      <img src="../assets/images/dashboard-logo.png" alt="trello_dashboard" />
+    </div>
+    <div class="dashboard-header-empty"></div>
+  </header>
+
+  <div id="body-container">
+
+    <div id="side-container">
+      <h6 class="side-container-title">your dashboard</h6>
+      <div class="dashboard-list user-dashboard">
+        <img src="../assets/icons/user-dashboard-icon.png" alt="User_dashboard" />
+        <a href="./dashboard.html" class="user-dashboard-link">User dashboard</a>
+      </div>
+      <div class="dashboard-list new-user">
+        <img src="../assets/icons/add-new-user-icon.png" alt="Add_new_user" />
+        <a href="./add-user.html" class="add-new-user-link">Add new user</a>
+      </div>
+      <div class="dashboard-list sign-out">
+        <img src="../assets/icons/sign-out-icon.png" alt="Sign_out" />
+        <a href="./sign-in.html" class="sign-out-link">Sign out</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <div class="main-title-div">
+        <i class="fa-solid fa-bars"></i>
+        <h1>User Management</h1>
+      </div>
+
+      <div class="search-div">
+        <input type="text" id="search-box" name="search-box" placeholder="Search user by name" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <div id="user-table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>User code</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Birthday</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+
+      <div id="pagination">
+        <div class="pagination-element arrow-left"><i class="fa-solid fa-arrow-left"></i></div>
+        <ul id="pagination-list"></ul>
+        <div class="pagination-element arrow-right"><i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./dashboard.js"></script>
+</body>
+
+</html>
